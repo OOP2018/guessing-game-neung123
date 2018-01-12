@@ -1,23 +1,32 @@
 import java.util.Scanner;
 
-/** 
- *  Play guessing game on the console.
- */
+
+
+
 public class GameConsole {
 
-	/** play the game. */
+	/**
+	 *  Play guessing game on the console
+	 *  by using an input from user.
+	 *  @param game is the NumberGame for user to play.
+	 *  @return the correct answer
+	 */
 	public int play(NumberGame game) {
+		boolean correct;
+		int guess;
+
 		Scanner console = new Scanner(System.in);
 		
 		// describe the game
 		System.out.println( game.toString() );
-		
-		// This is just an example.
-		System.out.println( game.getMessage() );
-		System.out.print("Your answer? ");
-		int guess = console.nextInt();
-		boolean correct = game.guess(guess);
-		System.out.println( game.getMessage() );
+
+		do {
+			System.out.print("Your answer? ");
+			guess = console.nextInt();
+			correct = game.guess(guess);
+			System.out.println( game.getMessage() );
+		} while (!correct);
+
 		return guess;
 	}
 	

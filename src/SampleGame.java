@@ -12,12 +12,12 @@ public class SampleGame extends NumberGame {
     private int secret;
     
 	/** count guesses */
-//TODO add an attribute to count guesses
+	private int countGuesses;
 
     /** Initialize a new default game. */
     public SampleGame()
     {
-		this(100);		
+		this(100);
     }
 
 	public SampleGame(int upperbound) {
