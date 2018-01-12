@@ -1,6 +1,5 @@
 /**
- * Automatically find the secret to any NumberGame
- * @author Pornpavee Seri-umnuoy
+ * Automatically find the sec
  */
 public class GameSolver {
 
@@ -11,12 +10,20 @@ public class GameSolver {
      */
     public int play (NumberGame game){
         boolean correct = false;
-        int answer = 0;
+        int upper = game.getUpperBound();
+        int small = 0;
+        int answer;
 
-        while (!correct){
-            answer++;
+        do{
+            answer = (small+upper)/2;
             correct = game.guess(answer);
-        }
+            if(game.getMessage().contains("too small")){
+                small = answer;
+            }else if(game.getMessage().contains("too large")){
+                upper = answer;
+            }
+
+        }while (!correct);
 
         return answer;
     }
