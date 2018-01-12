@@ -1,10 +1,6 @@
 /**
  * The base class for all number games.
- * Your guessing game should extend this class and
- * override the methods: guess(), toString(), getUpperBound().
- * 
- * Your class should not override getMessage() and setMessage(),
- * just use the methods from this class.
+ * @author Pornpavee Seri-umnuoy
  */
 public class NumberGame {
 	/** A helpful message for user. */

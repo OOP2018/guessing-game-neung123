@@ -1,3 +1,7 @@
+/**
+ * Automatically find the secret to any NumberGame
+ * @author Pornpavee Seri-umnuoy
+ */
 public class GameSolver {
 
     /**

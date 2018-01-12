@@ -1,7 +1,10 @@
 import java.util.Scanner;
 
-
-
+/**
+ * GameConsole is the main class for
+ * interacting with a user.
+ * @author Pornpavee Seri-umnuoy
+ */
 
 public class GameConsole {
 
@@ -16,8 +19,7 @@ public class GameConsole {
 		int guess;
 
 		Scanner console = new Scanner(System.in);
-		
-		// describe the game
+
 		System.out.println( game.toString() );
 
 		do {

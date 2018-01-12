@@ -2,8 +2,7 @@ import java.util.Random;
 /**
  * Example guessing game.
  * 
- * @author Your Name
- * @version 2018.01.11
+ * @author Pornpavee Seri-umnuoy
  */
 public class SampleGame extends NumberGame {
     /** upper bound for secret number */
@@ -15,8 +14,7 @@ public class SampleGame extends NumberGame {
 	private int countGuesses;
 
     /** Initialize a new default game. */
-    public SampleGame()
-    {
+    public SampleGame() {
 		this(100);
     }
 
