@@ -10,7 +10,7 @@ public class GameSolver {
      */
     public int play (NumberGame game){
         boolean correct = false;
-        int upper = game.getUpperBound();
+        int upper = game.getUpperBound()+1;
         int small = 0;
         int answer;
 
@@ -22,7 +22,7 @@ public class GameSolver {
             }else if(game.getMessage().contains("too large")){
                 upper = answer;
             }
-
+            System.out.println(answer);
         }while (!correct);
 
         return answer;
