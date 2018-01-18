@@ -1,5 +1,6 @@
 /**
- * Automatically find the sec
+ * Automatically find the solution for PornpaveeGame.
+ * @author Pornpavee Seri-umnuoy
  */
 public class GameSolver {
 
@@ -10,12 +11,12 @@ public class GameSolver {
      */
     public int play (NumberGame game){
         boolean correct = false;
-        int upper = game.getUpperBound()+1;
+        int upper = game.getUpperBound();
         int small = 0;
         int answer;
 
         do{
-            answer = (small+upper)/2;
+            answer = small + (upper-small)/2;
             correct = game.guess(answer);
             if(game.getMessage().contains("too small")){
                 small = answer;

@@ -15,6 +15,12 @@ public class PornpaveeGame extends NumberGame {
         this(100);
     }
 
+    /**
+     * Initialize a new default game and random
+     * a secret number.
+     * @param upperBound is the maximum value of
+     *                   the number in PornpaveeGame.
+     */
     public PornpaveeGame (int upperBound){
         this.upperBound = upperBound;
         long seed = System.nanoTime();
@@ -24,6 +30,11 @@ public class PornpaveeGame extends NumberGame {
         super.setMessage("I'm thinking of a number between 1 and " + upperBound);
     }
 
+    /**
+     * Evaluate a user's guess.
+     * @param answer is the user's answer, as an integer.
+     * @return true if guess is correct, false otherwise.
+     */
     @Override
     public boolean guess(int answer) {
         countGuesses ++;
@@ -36,17 +47,28 @@ public class PornpaveeGame extends NumberGame {
         return false;
     }
 
-    /** Get the game upper bound. */
+    /**
+     * @return the game upper bound.
+     */
+
     public int getUpperBound() {
         return upperBound;
     }
-    /** Describe the game. */
+
+    /**
+     * Describe the game when you call this method.
+     * @return a string that explain how to play this game.
+     */
     @Override
     public String toString() {
         return "Guess a secret number between 1 and " + upperBound;
     }
-    /** Get the game number of the time that you guessed in this game. */
-    public int getCountGuesses() {
+
+    /**
+     * @return the number of the time that
+     * you guessed in this game.
+     */
+    public int getCount(){
         return countGuesses;
     }
 }

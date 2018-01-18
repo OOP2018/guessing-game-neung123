@@ -5,13 +5,11 @@
 public class NumberGame {
 	/** A helpful message for user. */
 	private String message;
-	private int countGuesses;
 
     /** Initialize a new default game. */
     public NumberGame() {
 		// initialize your game.
     	message = "";
-		countGuesses = 0;
     }
    
     /**
@@ -60,7 +58,7 @@ public class NumberGame {
 		return "You should override this method for your game";
     }
 
-	public int getCountGuesses() {
-		return countGuesses;
+	public int getCount() {
+		return 0;
 	}
 }
