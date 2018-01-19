@@ -22,7 +22,7 @@ public class GameSolver {
                 small = answer;
             }else if(game.getMessage().contains("too large")){
                 upper = answer;
-            }
+            }else break;
     
         }while (!correct);
 
