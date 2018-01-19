@@ -57,7 +57,10 @@ public class NumberGame {
     public String toString() {
 		return "You should override this method for your game";
     }
-
+  /**
+     * @return the number of the time that
+     * you guessed in this game.
+     */
 	public int getCount() {
 		return 0;
 	}
