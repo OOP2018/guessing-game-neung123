@@ -1,8 +1,12 @@
+package game;
+
+import game.NumberGame;
+
 import java.util.Random;
 /**
  * Example guessing game.
  * This class will random a number between
- * 1 and the upperBound in the Main class
+ * 1 and the upperBound in the game.Main class
  * @author Pornpavee Seri-umnuoy
  */
 public class PornpaveeGame extends NumberGame {
@@ -19,7 +23,7 @@ public class PornpaveeGame extends NumberGame {
      * Initialize a new default game and random
      * a secret number.
      * @param upperBound is the maximum value of
-     *                   the number in PornpaveeGame.
+     *                   the number in game.PornpaveeGame.
      */
     public PornpaveeGame (int upperBound){
         this.upperBound = upperBound;
@@ -64,11 +68,15 @@ public class PornpaveeGame extends NumberGame {
         return "Guess a secret number between 1 and " + upperBound;
     }
 
-    /**
+    /**z
      * @return the number of the time that
      * you guessed in this game.
      */
     public int getCount(){
         return countGuesses;
+    }
+
+    public int getSecretNumber() {
+        return secretNumber;
     }
 }

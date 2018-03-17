@@ -1,12 +1,14 @@
+package game;
+
 /**
- * Automatically find the solution for PornpaveeGame.
+ * Automatically find the solution for game.PornpaveeGame.
  * @author Pornpavee Seri-umnuoy
  */
 public class GameSolver {
 
     /**
-     * Play the NumberGame and return the solution.
-     * @param game is the NumberGame to solve
+     * Play the game.NumberGame and return the solution.
+     * @param game is the game.NumberGame to solve
      * @return the secret number of the game
      */
     public int play (NumberGame game){
@@ -23,7 +25,6 @@ public class GameSolver {
             }else if(game.getMessage().contains("too large")){
                 upper = answer;
             }else break;
-    
         }while (!correct);
 
         return answer;
