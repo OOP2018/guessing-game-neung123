@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="315.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.GuessingGameController">
+<AnchorPane prefHeight="275.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.GuessingGameController">
    <children>
       <Label layoutX="84.0" layoutY="57.0" text="Guess a secret number between 1 and 100" />
       <Label layoutX="178.0" layoutY="78.0" text="Your answer? " />
@@ -14,6 +14,5 @@
       <Label fx:id="labelText" layoutX="41.0" layoutY="230.0" prefHeight="31.0" prefWidth="275.0" />
       <Button fx:id="button1" layoutX="98.0" layoutY="172.0" mnemonicParsing="false" onAction="#handlePlay" text="Submit" />
       <Button fx:id="button2" layoutX="281.0" layoutY="172.0" mnemonicParsing="false" onAction="#handleGiveUp" text="Give up" />
-      <Label fx:id="labelText2" layoutX="41.0" layoutY="261.0" prefHeight="31.0" prefWidth="275.0" />
    </children>
 </AnchorPane>

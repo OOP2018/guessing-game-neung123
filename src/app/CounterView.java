@@ -43,7 +43,7 @@ public class CounterView implements java.util.Observer {
         label = new Label("   ");
         // make the label big enough
         label.setPrefWidth(600);
-        label.setFont(new Font("Arial", 40.0));
+        label.setFont(new Font("Comic Sans MS", 40.0));
         label.setAlignment(Pos.CENTER);
         // Add the label to the HBox.  You can all more components, too.
         root.getChildren().add(label);

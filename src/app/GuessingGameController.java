@@ -11,18 +11,18 @@ import javafx.scene.control.TextField;
 import javax.swing.*;
 import java.util.Observable;
 
-public class GuessingGameController {
+public class GuessingGameController extends Observable {
+    private static int currentNumber = 0;
     private NumberGame game;
     private int upperBound = 100;
     private Counter counter = new Counter();
     private CounterView counterView;
+    private GameView gameView;
 
     @FXML
     TextField textField;
     @FXML
     Label labelText;
-    @FXML
-    Label labelText2;
     @FXML
     Button button1;
     @FXML
@@ -34,6 +34,10 @@ public class GuessingGameController {
         counterView = new CounterView(counter);
         counter.addObserver(counterView);
         counterView.run();
+
+        gameView = new GameView();
+        this.addObserver(gameView);
+        gameView.run();
     }
 
     public void handlePlay(ActionEvent event) {
@@ -47,10 +51,10 @@ public class GuessingGameController {
             textField.clear();
             return;
         }
+        setCurrentNumber(number);
         counter.add(1);
         boolean correct = game.guess(number);
         labelText.setText(game.getMessage());
-        labelText2.setText("count: " + game.getCount() + " times");
         textField.clear();
 
         if(correct) newGame();
@@ -71,7 +75,14 @@ public class GuessingGameController {
         counter.setCount(0);
     }
 
+    public static int getCurrentNumber() {
+        return currentNumber;
+    }
 
+    public void setCurrentNumber(int newNumber){
+        currentNumber = newNumber;
 
-
+        setChanged();
+        notifyObservers();
+    }
 }
