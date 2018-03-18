@@ -15,6 +15,7 @@ import java.util.Observable;
  * This has only one component (but you can add more components),
  * so write it in code instead of FXML.
  *
+ * @author Pornpavee Seri-umnuoy
  */
 public class CounterView implements java.util.Observer {
     /** the stage (top-level window) for showing scene */
@@ -33,6 +34,9 @@ public class CounterView implements java.util.Observer {
         initComponents();
     }
 
+    /**
+     * Prepare everything for running.
+     */
     private void initComponents() {
         stage = new Stage();
         // components and containers for our window
@@ -61,6 +65,9 @@ public class CounterView implements java.util.Observer {
         displayCount();
     }
 
+    /**
+     * Display on the screen.
+     */
     public void displayCount() {
         label.setText( String.format("You guessed it: %2d times", counter.getCount()) );
     }

@@ -11,6 +11,11 @@ import javafx.scene.control.TextField;
 import javax.swing.*;
 import java.util.Observable;
 
+/**
+ *  UI controller for events and initializing components.
+ *
+ * @author Pornpavee Seri-umnuoy
+ */
 public class GuessingGameController extends Observable {
     private static int currentNumber = 0;
     private NumberGame game;
@@ -28,6 +33,9 @@ public class GuessingGameController extends Observable {
     @FXML
     Button button2;
 
+    /**
+     * Prepare everything for running.
+     */
     public void initialize(){
         game = new PornpaveeGame(upperBound);
 
@@ -40,6 +48,9 @@ public class GuessingGameController extends Observable {
         gameView.run();
     }
 
+    /**
+     * Playing number game and call another method for show the answer.
+     */
     public void handlePlay(ActionEvent event) {
 
         String text = textField.getText().trim();
@@ -60,10 +71,16 @@ public class GuessingGameController extends Observable {
         if(correct) newGame();
     }
 
+    /**
+     * Show the correct answer.
+     */
     public void handleGiveUp(){
         labelText.setText("the secret number is " + game.getSecretNumber());
     }
 
+    /**
+     * Prepare everything for initialize a new NumberGame.
+     */
     public void newGame() {
         int reply = JOptionPane.showConfirmDialog(null,
                 "Right! You guessed the secret number in "+ game.getCount() + " times\nPlay again?",
@@ -75,10 +92,17 @@ public class GuessingGameController extends Observable {
         counter.setCount(0);
     }
 
+    /**
+     * @return currentNumber
+     */
     public static int getCurrentNumber() {
         return currentNumber;
     }
 
+    /**
+     * Set currentNumber and update to observer(GameView).
+     * @param newNumber
+     */
     public void setCurrentNumber(int newNumber){
         currentNumber = newNumber;
 
