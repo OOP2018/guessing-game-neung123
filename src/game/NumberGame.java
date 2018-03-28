@@ -60,9 +60,18 @@ public class NumberGame {
 		return "You should override this method for your game";
     }
 
+	/**
+	 * A method for return count all number games.
+	 * @return 	default is 0
+	 * 			number of count in number game.
+	 */
 	public int getCount() {
 		return 0;
 	}
 
+	/**
+	 * A method for return secret number in all number games.
+	 * @return secret number in number game.
+	 */
 	public int getSecretNumber() { return 0;}
 }
